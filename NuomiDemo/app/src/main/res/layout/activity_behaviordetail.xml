@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".behavior.BehaviorDetailActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:clipChildren="false"
+
+    android:layout_height="match_parent">
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/rv"
+    android:background="#f1f1f1"
+    app:layout_behavior="com.example.v_yanligang.nuomidemo.behavior.ZoomHeaderBehavior"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+<com.example.v_yanligang.nuomidemo.behavior.ZoomHeadView
+    android:id="@+id/zoomheader"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:layout_height="500dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            />
+        <TextView
+            android:alpha="0"
+            android:id="@+id/tv_close"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text = "下滑关闭"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+    <com.example.v_yanligang.nuomidemo.behavior.ZoomHeaderViewPager
+        android:id="@+id/vp"
+        android:layout_width="300dp"
+        android:clipChildren="false"
+        android:layout_height="wrap_content"></com.example.v_yanligang.nuomidemo.behavior.ZoomHeaderViewPager>
+</com.example.v_yanligang.nuomidemo.behavior.ZoomHeadView>
+</android.support.design.widget.CoordinatorLayout>
